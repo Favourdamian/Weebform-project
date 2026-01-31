@@ -3,56 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weebform</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <title>WEEBFORM</title>
+    <link rel="stylesheet" href="front-page.css" />
   </head>
-  <body> 
-    <div class="container">
-      <div class="logo">
-        <img src="Assets/untitled1 1.png" alt="WeebForm Logo" />
-        <h1>Create Your Account</h1>
-      </div>
-
-      <form class="form">
-        <!-- Username -->
-        <div class="input-box">
-          <input type="text" placeholder="@Username" class="box" required minlength="5"/>
-        </div>
-
-        <!-- Email -->
-        <div class="input-box">
-          <i class="fa-regular fa-envelope icon"></i>
-          <input type="email" placeholder="Your email address" class="box" required/>
-          <small class="error-message"></small>
-        </div>
-
-        <!-- Password -->
-        <div class="input-box">
-          <i class="fa-solid fa-lock icon"></i>
-          <input type="password" placeholder="Choose password" class="box password" required minlength="6"/>
-          <i class="toggle fa fa-eye"></i>
-          <small class="error-message"></small>
-        </div>
-
-        <!-- Checkbox -->
-        <div class="checkbox">
-          <input type="checkbox" id="terms" />
-          <label for="terms">
-            <span class="custom-checkbox"></span>
-            I agree to the <a href="#">Terms and Conditions</a>
-          </label>
-          <small class="error-message" id="terms-error"></small>
-        </div>
-
-        <button type="submit">Sign Up</button>
-        <p>Already have an account? <a href="Login.html">Log In</a></p>
-      </form>
+  <body class="front-page">
+    <div class="image">
+      <img src="/Assets/weebform logo.png" alt="Descriptive Alt Text" />
     </div>
-
     <script src="/src/Weebform.js"></script>
   </body>
 </html>

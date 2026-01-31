@@ -1,12 +1,11 @@
 "Use strict";
 
-// Front-page redirection to Start-page after 5 seconds 
-if (document.body.classList.contains( "front-page")) {
+// Front-page redirection to Start-page after 5 seconds
+if (document.body.classList.contains("front-page")) {
   setTimeout(() => {
     window.location.href = "/src/Start-page.html";
   }, 5000);
 }
-
 
 // Account.html redirection
 document.querySelectorAll(".toggle").forEach((toggle) => {
