@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setup Profile - Weebform</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container forgot-password-container">
+      <div class="logo-small">
+        <img src="Assets/untitled1 1.png" alt="W" style="width: 100%" />
+      </div>
+
+      <h1 style="margin-top: 80px; text-align: left">
+        What would you like others to call you?
+      </h1>
+
+      <form class="form" action="Login.html">
+        <div class="input-box">
+          <input type="text" placeholder="Display Name" class="box" required />
+        </div>
+
+        <p style="text-align: left; margin-bottom: 0">
+          Select a Profile Picture
+        </p>
+
+        <div class="profile-upload">
+          <div class="profile-preview">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <label for="profile-input" class="upload-icon">
+            <i class="fa-solid fa-image"></i>
+          </label>
+          <input type="file" id="profile-input" hidden accept="image/*" />
+        </div>
+
+        <button type="submit" class="btn-gradient">Save and Continue</button>
+      </form>
+
+      <a href="Login.html" class="skip-btn">Skip</a>
+    </div>
+
+    <script src="js/Weebform.js"></script>
+  </body>
+</html>

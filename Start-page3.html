@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weebform</title>
-    <link rel="stylesheet" href="/src/Start-page3.css" />
+    <link rel="stylesheet" href="css/Start-page3.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -14,8 +14,10 @@
     <div class="image"></div>
     <div class="icon">
       <i
-        class="fa-solid fa-arrow-left"
-        onclick="location.href = '/src/Start-page2.html'"
+        class="fa-solid fa-arrow-left transition-link"
+        data-target="Start-page2.html"
+        data-direction="right"
+        style="cursor: pointer;"
       ></i>
     </div>
     <div class="container">
@@ -28,12 +30,12 @@
       </div>
 
       <div class="dots">
-        <a href="/src/Start-page.html" class="dot"></a>
-        <a href="/src/Start-page2.html" class="dot"></a>
-        <a href="/src/Start-page3.html" class="dot active"></a>
+        <a href="#" data-target="Start-page.html" class="dot transition-link" data-direction="right"></a>
+        <a href="#" data-target="Start-page2.html" class="dot transition-link" data-direction="right"></a>
+        <a href="#" data-target="Start-page3.html" class="dot active transition-link"></a>
       </div>
-      <button onclick="location.href = '/src/create.html'">Get Started</button>
+      <button class="transition-link" data-target="create.html" data-direction="left">Get Started</button>
     </div>
-    <script src="/src/Weebform.js"></script>
+    <script src="js/Weebform.js"></script>
   </body>
 </html>

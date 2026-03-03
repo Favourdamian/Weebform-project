@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -10,7 +9,7 @@
 }
 
 body {
-   animation: pageInFromRight 1s ease-out forwards;
+  animation: pageInFromRight 1s ease-out forwards;
   background-color: black;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -27,7 +26,7 @@ body {
   background-position: 50% 70%;
   overflow: hidden;
   background-size: 200%;
-  background-image: url('/Assets/Group 233.png');
+  background-image: url("/Assets/Group 233.png");
 }
 /* end of image styling */
 
@@ -43,12 +42,12 @@ body {
 
 /* style container */
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-position: relative;
+  position: relative;
   align-items: center;
   top: 17em;
 }
@@ -63,9 +62,9 @@ position: relative;
   font-weight: 400;
   margin-bottom: 20px;
 }
-p{
-   font-display: swap;
-   font-size: 15px;
+p {
+  font-display: swap;
+  font-size: 15px;
   font-family: "Inter", sans-serif;
 }
 
@@ -92,7 +91,6 @@ p{
   background-color: #cf833f;
 }
 /*  End of dot styling*/
-
 
 /* button styling */
 button {
@@ -123,9 +121,38 @@ button {
   }
 }
 
+@keyframes pageOutToLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+}
+
+@keyframes pageOutToRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+
+.page-out-left {
+  animation: pageOutToLeft 0.5s ease-in forwards;
+}
+
+.page-out-right {
+  animation: pageOutToRight 0.5s ease-in forwards;
+}
+
 /* Media query */
-@media (max-width: 767px)
-{
+@media (max-width: 767px) {
   .container {
     top: 23em;
   }

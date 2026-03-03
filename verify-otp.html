@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify OTP - Weebform</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container forgot-password-container">
+      <div class="back-btn" onclick="window.history.back()">
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+
+      <h1>Email has been sent!</h1>
+      <p>
+        Please check your inbox and enter your verification code to reset
+        password
+      </p>
+
+      <div class="otp-container">
+        <input type="text" maxlength="1" class="otp-input" />
+        <input type="text" maxlength="1" class="otp-input" />
+        <input type="text" maxlength="1" class="otp-input" />
+        <input type="text" maxlength="1" class="otp-input" />
+      </div>
+
+      <p class="expiry-text">Code expires in: <b>03:12</b></p>
+
+      <form class="form" action="reset-password.html">
+        <button type="submit" class="btn-gradient">Verify</button>
+      </form>
+
+      <p class="resend-text">Didn't receive the code? <a href="#">Resend</a></p>
+    </div>
+
+    <script src="js/Weebform.js"></script>
+  </body>
+</html>

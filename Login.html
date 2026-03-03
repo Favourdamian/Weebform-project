@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weebform</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="Assets/untitled1 1.png" alt="WeebForm Logo" />
+        <h1>Welcome Back</h1>
+      </div>
+
+      <form class="form">
+        <!-- Email -->
+        <div class="input-box">
+          <i class="fa-regular fa-envelope icon"></i>
+          <input
+            type="email"
+            placeholder="Your email address"
+            class="box"
+            required
+          />
+          <small class="error-message"></small>
+        </div>
+
+        <!-- Password -->
+        <div class="input-box">
+          <i class="fa-solid fa-lock icon"></i>
+          <input
+            type="password"
+            placeholder="Choose password"
+            class="box password"
+            required
+            minlength="6"
+          />
+          <i class="toggle fa fa-eye"></i>
+          <small class="error-message"></small>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+          "
+        >
+          <div class="checkbox" style="margin-top: 0">
+            <input type="checkbox" id="terms" />
+
+            <label for="terms">
+              <span class="custom-checkbox"></span>
+              Remember me
+            </label>
+            <small class="error-message" id="terms-error"></small>
+          </div>
+          <a href="forgot-password.html" style="font-size: 14px"
+            >Forgot Password?</a
+          >
+        </div>
+
+        <button type="submit">Log In</button>
+        <p>Don't have an account? <a href="create.html">Sign Up</a></p>
+      </form>
+    </div>
+
+    <script src="js/Weebform.js"></script>
+  </body>
+</html>
