@@ -119,3 +119,39 @@ if (profileInput && profilePreview) {
     }
   });
 }
+
+// Swipe Gesture Navigation
+let touchStartX = 0;
+let touchEndX = 0;
+
+window.addEventListener(
+  "touchstart",
+  (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  },
+  false,
+);
+
+window.addEventListener(
+  "touchend",
+  (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  },
+  false,
+);
+
+function handleSwipe() {
+  const threshold = 50; // Minimum distance to be considered a swipe
+  const deltaX = touchEndX - touchStartX;
+
+  if (deltaX > threshold) {
+    // Swipe Right -> Navigate to NEXT page (as requested)
+    const nextBtn = document.querySelector("button.transition-link");
+    if (nextBtn) nextBtn.click();
+  } else if (deltaX < -threshold) {
+    // Swipe Left -> Navigate to PREVIOUS page (as requested)
+    const backBtn = document.querySelector(".fa-arrow-left.transition-link");
+    if (backBtn) backBtn.click();
+  }
+}

@@ -9,6 +9,7 @@
 }
 
 body {
+  overflow-x: hidden;
   animation: pageInFromRight 0.4s ease-out forwards;
   background-color: black;
   color: white;
