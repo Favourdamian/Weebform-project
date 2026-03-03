@@ -3,7 +3,7 @@
 // Front-page redirection to Start-page after 2 seconds
 if (document.body.classList.contains("front-page")) {
   setTimeout(() => {
-    document.body.classList.add("page-out-left");
+    document.body.classList.add("page-fade-out");
     setTimeout(() => {
       window.location.href = "Start-page.html";
     }, 300); // 300ms exit animation
@@ -17,15 +17,8 @@ document.querySelectorAll(".transition-link").forEach((link) => {
     const target = link.getAttribute("data-target");
     if (!target) return;
 
-    // Optional: Determine direction (e.g., 'left' for "Next", 'right' for "Back")
-    const direction = link.getAttribute("data-direction") || "left";
-
-    // Apply exit animation to body
-    if (direction === "left") {
-      document.body.classList.add("page-out-left");
-    } else {
-      document.body.classList.add("page-out-right");
-    }
+    // Apply fade-out animation to body
+    document.body.classList.add("page-fade-out");
 
     // Wait for the animation to finish before navigating (300ms matches faster CSS duration)
     setTimeout(() => {
