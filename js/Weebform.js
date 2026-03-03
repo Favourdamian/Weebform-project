@@ -1,10 +1,13 @@
 "Use strict";
 
-// Front-page redirection to Start-page after 5 seconds
+// Front-page redirection to Start-page after 2 seconds
 if (document.body.classList.contains("front-page")) {
   setTimeout(() => {
-    window.location.href = "Start-page.html";
-  }, 5000);
+    document.body.classList.add("page-out-left");
+    setTimeout(() => {
+      window.location.href = "Start-page.html";
+    }, 300); // 300ms exit animation
+  }, 2000);
 }
 
 // Page Transition Logic
@@ -24,10 +27,10 @@ document.querySelectorAll(".transition-link").forEach((link) => {
       document.body.classList.add("page-out-right");
     }
 
-    // Wait for the animation to finish before navigating (500ms matches CSS duration)
+    // Wait for the animation to finish before navigating (300ms matches faster CSS duration)
     setTimeout(() => {
       window.location.href = target;
-    }, 500);
+    }, 300);
   });
 });
 
