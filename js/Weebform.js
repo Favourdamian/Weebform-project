@@ -138,12 +138,12 @@ function handleSwipe() {
   const threshold = 50; // Minimum distance to be considered a swipe
   const deltaX = touchEndX - touchStartX;
 
-  if (deltaX > threshold) {
-    // Swipe Right -> Navigate to NEXT page (as requested)
+  if (deltaX < -threshold) {
+    // Swipe Left -> Navigate to NEXT page
     const nextBtn = document.querySelector("button.transition-link");
     if (nextBtn) nextBtn.click();
-  } else if (deltaX < -threshold) {
-    // Swipe Left -> Navigate to PREVIOUS page (as requested)
+  } else if (deltaX > threshold) {
+    // Swipe Right -> Navigate to PREVIOUS page
     const backBtn = document.querySelector(".fa-arrow-left.transition-link");
     if (backBtn) backBtn.click();
   }
